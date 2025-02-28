@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form </title>
+</head>
+<body><form action="">
+    <input type="text" id="name" name="" placeholder="Enter your name ">
+    <input type="email" id="email" email="" placeholder="Enter your email  ">
+    <input type="password" id="password" password="" placeholder="Enter your password "><br><br>
+    <input type="submit" value="Submit">
+    
+    <h1 >your name</h1>
+    <h2> your email</h2>
+    <h3>your password</h3>
+    
+</form>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",fetData)
+    function fetData(r){
+        r.preventDefault();
+       
+       let Yname=document.querySelector("#name").value
+       let Yemail=document.querySelector("#email").value
+       let Ypassword=document.querySelector("#password").value;
+
+       console.log(Yname)
+       console.log(Yemail)
+       console.log(Ypassword)
+       
+       document.querySelector("h1").innerText =Yname;
+       document.querySelector("h2").innerText =Yemail;
+       document.querySelector("h3").innerText =Ypassword;
+    }
+
+    
+</script>
